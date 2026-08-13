@@ -31,6 +31,7 @@ MANIFEST_VERSION = "0.3"  # schemas/mcpb-manifest-latest.schema.json pins 0.3
 
 def pyproject_field(field):
     print()
+    print()
     text = (REPO_ROOT / "pyproject.toml").read_text(encoding="utf-8")
     match = re.search(rf'^{field}\s*=\s*"([^"]+)"', text, re.M)
     assert match, f"Could not read {field} from pyproject.toml"
